@@ -1,0 +1,205 @@
+.one-cards {
+  background-color: #0a081b;
+  color: white;
+  height: 100vh;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animated-card {
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+          box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+}
+
+.animated-card img {
+  width: 100%;
+  height: 600px;
+  border-radius: 9px;
+}
+
+.animated-card .animated-card-info {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-card .animated-card-info .anim-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  bottom: 13.5rem;
+  position: absolute;
+  color: #fff;
+  left: 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-card .animated-card-info .anim-name::after {
+  position: absolute;
+  content: "";
+  left: -2rem;
+  overflow: hidden;
+  bottom: -5px;
+  background: #b5b938;
+  width: calc(100% + 2rem);
+  height: 5px;
+}
+
+.animated-card .animated-card-info .anim-price {
+  font-family: sans-serif;
+  bottom: 11.3rem;
+  position: absolute;
+  color: #fff;
+  left: 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 6px;
+}
+
+.animated-card .animated-card-info .anim-desc {
+  font-family: sans-serif;
+  bottom: 7rem;
+  position: absolute;
+  color: #b8b8b8;
+  left: 2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize;
+  overflow: hidden;
+  max-width: 70%;
+}
+
+.animated-card .animated-card-info .anim-btn {
+  bottom: 4rem;
+  position: absolute;
+  left: 2rem;
+  text-transform: capitalize;
+}
+
+.animated-card:hover .animated-card-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(136, 151, 0, 0.082);
+  overflow: hidden;
+}
+
+.animated-card:hover .animated-card-info {
+  -webkit-transform: translateY(1);
+          transform: translateY(1);
+  visibility: visible;
+  display: inline-block;
+  opacity: 1;
+}
+
+.animated-card:hover .animated-card-info {
+  -webkit-transform: translateY(1);
+          transform: translateY(1);
+  visibility: visible;
+}
+
+.animated-card:hover {
+  -webkit-box-shadow: rgba(255, 140, 58, 0.25) 0px 13px 27px -5px, rgba(167, 224, 70, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(255, 140, 58, 0.25) 0px 13px 27px -5px, rgba(167, 224, 70, 0.3) 0px 8px 16px -8px;
+}
+
+.animated-card-bg {
+  position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.animated-card-bg:hover .animated-card-info {
+  -webkit-transform: translateY(1);
+          transform: translateY(1);
+  visibility: visible;
+}
+
+/* CSS */
+.anim-btn {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ef4765), to(#ff9a5a));
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.anim-btn:not([disabled]):focus {
+  -webkit-box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+          box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.anim-btn:not([disabled]):hover {
+  -webkit-box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+          box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5), -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5), 0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+@media screen and (max-width: 992px) {
+  .one-cards {
+    margin: 19rem 0;
+    background: transparent;
+  }
+  .one-cards .animated-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 626px) {
+  .one-cards .animated-card .animated-card-info > div {
+    margin-bottom: 4rem;
+  }
+  .one-cards .animated-card .animated-card-info > div .anim-price {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 477px) {
+  .anim-desc {
+    display: none;
+  }
+  .anim-btn {
+    margin-bottom: 8rem;
+  }
+}
+/*# sourceMappingURL=oneCard.css.map */

@@ -1,0 +1,200 @@
+.cart h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: auto;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+  background-color: #132e03;
+  color: white;
+  border: 2px solid #797373;
+  border-radius: 9px;
+  padding: 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.cart .cart-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.cart .cart-left hr {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.cart .cart-image img {
+  width: 150px;
+}
+
+.cart .cart-name {
+  color: #100e0e;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.cart .cart-name span {
+  background: #222;
+  padding: 4px 9px;
+  border-radius: 9px;
+  color: ghostwhite;
+}
+
+.cart .cart-price {
+  font-size: 1.5rem;
+  margin-top: 0.7rem;
+  font-family: auto;
+}
+
+.cart .cart-price span {
+  background: #111;
+  padding: 4px 9px;
+  border-radius: 9px;
+  color: white;
+}
+
+.cart .cart-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+
+.cart .cart-buttons .remove,
+.cart .cart-buttons .add {
+  padding: 5px 1rem;
+  border: none;
+  border-radius: 7px;
+  background: #333;
+  color: white;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cart .cart-buttons .remove:hover,
+.cart .cart-buttons .add:hover {
+  border: 1px solid #333;
+  color: #333;
+  cursor: pointer;
+  background: transparent;
+}
+
+.cart .cart-buttons .cart-quantity {
+  font-size: 2rem;
+  background: #fcfc9f;
+  padding: 5px 1rem;
+  border-radius: 8px;
+}
+
+.cart .cart-price-total {
+  background: #666;
+  padding: 4px 1rem;
+  border: 1px solid blue;
+  border-radius: 9px;
+  color: yellow;
+  font-size: 1.5rem;
+}
+
+.cart-bottom-section {
+  font-size: 1.7rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.cart-bottom-section button {
+  background: #222;
+  color: white;
+  border: 1px solid orange;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.cart-bottom-section button:hover {
+  border: 1px solid #333;
+  color: #333;
+  cursor: pointer;
+  background: transparent;
+}
+
+.cart-bottom-section .row {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+.cart-bottom-section .row span {
+  background-color: #111;
+  color: white;
+  padding: 5px 1rem;
+  border: 3px solid #279101;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 800px) {
+  .cart-left {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    text-align: center;
+  }
+  .cart-bottom-section {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cart-bottom-section {
+    max-width: 60vw;
+  }
+  .cart-bottom-section .row {
+    margin-right: 5rem;
+  }
+  .cart-bottom-section .row .col-2 {
+    margin-right: 5rem;
+  }
+}
+/*# sourceMappingURL=cart.css.map */

@@ -1,0 +1,122 @@
+.footer {
+  display: flex;
+  margin-top: 8rem;
+  background-color: rgba(247, 248, 250, 0.693);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+    rgba(51, 51, 51, 0.136) 0px 0px 0px 3px;
+  .footer-left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .footer-desc {
+      margin: 20px 0px;
+    }
+    .footer-social-contaainer {
+      display: flex;
+    }
+  }
+
+  .footer-social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    color: white;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      color: green;
+    }
+  }
+  // center
+  .footer-center {
+    padding: 20px;
+    flex: 1;
+    .footer-center-title {
+      margin-bottom: 30px;
+    }
+    .footer-list {
+      margin: 0;
+      flex-wrap: wrap;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      .footer-list-item {
+        width: 50%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  // right
+  .footer-right {
+    .footer-title {
+      flex: 1;
+      padding: 20px;
+    }
+    .footer-contact-item {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.face {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.219);
+  &:hover {
+    transition: all 0.3s ease;
+    color: #1877f2;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+.you {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.208);
+  &:hover {
+    transition: all 0.3s ease;
+    color: #ff0000;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+.ins {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.248);
+  &:hover {
+    transition: all 0.3s ease;
+    color: #c32aa3;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+.twi {
+  color: black;
+  background-color: rgba(0, 0, 0, 0.158);
+  &:hover {
+    transition: all 0.3s ease;
+    color: #1da1f2;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .footer {
+      width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    .foooter-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

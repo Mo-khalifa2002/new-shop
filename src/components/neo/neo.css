@@ -1,0 +1,142 @@
+.box-body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-body .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-backface-visibility: #222;
+          backface-visibility: #222;
+}
+
+.box-body .box:hover {
+  height: 400px;
+}
+
+.box-body .box .imgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box-body .box .imgbox img {
+  max-height: 100%;
+  opacity: 0.1;
+  -webkit-transition: all 0.5 ease-in-out;
+  transition: all 0.5 ease-in-out;
+}
+
+.box-body .box:hover .imgbox img {
+  opacity: 1;
+}
+
+.box-body .box::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -2;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box-body .box::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -2;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box-body .box:nth-child(2)::after, .box-body .box:nth-child(2)::before {
+  background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box-body .box:nth-child(3)::after, .box-body .box:nth-child(3)::before {
+  background: linear-gradient(235deg, #772aff, #010615, #2196f3);
+}
+
+.box-body .box .content {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+}
+
+.box-body .box .content h2 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.box-body .box .content h2 span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.box-body .box:hover .content {
+  opacity: 1;
+}
+/*# sourceMappingURL=neo.css.map */

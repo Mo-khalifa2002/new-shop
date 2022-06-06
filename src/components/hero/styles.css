@@ -1,0 +1,73 @@
+.mySwiper {
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.mySwiper .swiper-slide .product-right {
+  margin-bottom: 15rem;
+  background: black;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.mySwiper .swiper-slide .product-right .product-desc {
+  max-width: 80%;
+}
+
+.mySwiper .swiper-slide .product-right .product-name {
+  color: #bbff56;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 995px) {
+  .mySwiper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+    height: 100vh;
+  }
+  .mySwiper img {
+    display: none;
+  }
+  .mySwiper .product-right {
+    max-width: 70vw;
+    display: inline-block;
+    margin-top: 20%;
+  }
+  .mySwiper .product-right .product-name {
+    color: yellow !important;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .product-right {
+    max-width: 70vw;
+    display: inline-block;
+    margin-top: 35%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .product-right {
+    max-width: 70vw;
+    display: inline-block;
+    margin-top: 55%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

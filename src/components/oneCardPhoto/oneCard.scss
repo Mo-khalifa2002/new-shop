@@ -1,0 +1,200 @@
+$bl: rgba(124, 112, 231, 0.125);
+$light: #fff;
+$gray: rgb(184, 184, 184);
+$trans: all 0.3s ease-in-out;
+$border: 9px;
+
+.one-cards {
+  background-color: $bl;
+  color: white;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animated-card {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 600px;
+    border-radius: $border;
+  }
+  .animated-card-info {
+    // transform: translateY(15rem);
+    // overflow: hidden;
+    // display: none;
+    opacity: 0;
+    transition: $trans;
+    .anim-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: sans-serif;
+      bottom: 13.5rem;
+      position: absolute;
+      color: $light;
+      left: 2rem;
+      transition: $trans;
+      &::after {
+        position: absolute;
+        content: "";
+        left: -2rem;
+        overflow: hidden;
+        bottom: -5px;
+        background: rgb(181, 185, 56);
+        width: calc(100% + 2rem);
+        height: 5px;
+      }
+    }
+    .anim-price {
+      font-family: sans-serif;
+      bottom: 11.3rem;
+      position: absolute;
+      color: $light;
+      left: 2rem;
+      transition: $trans;
+      margin-bottom: 6px;
+    }
+    .anim-desc {
+      font-family: sans-serif;
+      bottom: 7rem;
+      position: absolute;
+      color: $gray;
+      left: 2rem;
+      transition: $trans;
+      text-transform: capitalize;
+      overflow: hidden;
+      max-width: 70%;
+    }
+    .anim-btn {
+      //   font-family: sans-serif;
+      bottom: 4rem;
+      position: absolute;
+      //   color: $light;
+      left: 2rem;
+      //   transition: $trans;
+      //   background: #00c200;
+      //   color: $bl;
+      //   padding: 5px 9px;
+      //   border: none;
+      //   outline: none;
+      //   border-radius: 3px;
+      //   font-family: sans-serif;
+      text-transform: capitalize;
+    }
+  }
+  &:hover {
+    .animated-card-bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(136, 151, 0, 0.082);
+      overflow: hidden;
+    }
+    .animated-card-info {
+      transform: translateY(1);
+      // overflow: hidden;
+      visibility: visible;
+      display: inline-block;
+      opacity: 1;
+    }
+  }
+  &:hover .animated-card-info {
+    transform: translateY(1);
+    // overflow: hidden;
+    visibility: visible;
+  }
+  transition: $trans;
+  box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+  &:hover {
+    box-shadow: rgba(255, 140, 58, 0.25) 0px 13px 27px -5px,
+      rgba(167, 224, 70, 0.3) 0px 8px 16px -8px;
+  }
+}
+.animated-card-bg {
+  position: absolute;
+  transition: $trans;
+  left: 0;
+  right: 0;
+  //   top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  &:hover .animated-card-info {
+    transform: translateY(1);
+    // overflow: hidden;
+    visibility: visible;
+  }
+}
+
+// button-62
+/* CSS */
+.anim-btn {
+  background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.anim-btn:not([disabled]):focus {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.anim-btn:not([disabled]):hover {
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
+    0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+@media screen and (max-width: 992px) {
+  .one-cards {
+    margin: 19rem 0;
+    background: transparent;
+    .animated-card {
+      margin-bottom: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 626px) {
+  .one-cards {
+    .animated-card {
+      .animated-card-info > div {
+        margin-bottom: 4rem;
+        .anim-price {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 477px) {
+  .anim-desc {
+    display: none;
+  }
+  .anim-btn {
+    margin-bottom: 8rem;
+  }
+}

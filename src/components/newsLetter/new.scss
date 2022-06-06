@@ -1,0 +1,50 @@
+.news {
+  margin-top: 5rem;
+  background: #fefeef;
+  padding: 5rem 0 !important;
+  .news-title {
+    font-family: inherit;
+    letter-spacing: 2px;
+    font-size: 5rem;
+    color: #01012c;
+  }
+  .new-par {
+    font-size: 1.5rem;
+    color: #3a3a3a;
+    font-weight: 600;
+  }
+  .news-input {
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    input {
+      border: none;
+      padding-left: 20px;
+      flex: 8;
+      &:focue {
+        border: none;
+        outline: none;
+      }
+    }
+    button {
+      border: none;
+      flex: 1;
+      color: white;
+      background-color: teal;
+    }
+  }
+  .newss-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .news-title {
+    font-size: 2rem !important;
+  }
+}

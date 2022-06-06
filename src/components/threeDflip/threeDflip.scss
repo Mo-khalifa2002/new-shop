@@ -1,0 +1,123 @@
+@mixin flexi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+$transi: transform 0.5s linear;
+
+.three-d-flip {
+  @include flexi;
+  gap: 2rem;
+  background-color: rgba(206, 214, 232, 0.656);
+  padding: 4rem 2rem;
+  margin: 5rem 0;
+  
+  .three-d-container {
+
+    position: relative;
+    width: 380px;
+    height: 480px;
+    transition: $transi;
+    cursor: pointer;
+    &:hover {
+      .three-front {
+        transform: perspective(600px) rotateY(-180deg);
+      }
+      .three-back {
+        transform: perspective(600px) rotateY(0deg);
+      }
+    }
+    .three-front {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      backface-visibility: hidden;
+      inset: 0;
+      transition: $transi;
+      transform: perspective(600px) rotateY(0deg);
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+  }
+  .three-back {
+    position: absolute;
+    inset: 0;
+    // display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: $transi;
+    color: white;
+    transform: perspective(600px) rotateY(180deg);
+    // background-color: rgba(51, 63, 130, 0.566);
+    background: rgb(65, 65, 69);
+    background: linear-gradient(
+      0deg,
+      rgba(65, 65, 69, 1) 0%,
+      rgba(60, 97, 153, 0.9839286056219363) 100%,
+      rgba(23, 28, 80, 1) 100%,
+      rgba(70, 37, 37, 1) 100%
+    );
+    .three-back-middle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .three-title {
+      color: white;
+      text-align: center;
+      text-transform: capitalize;
+      font-family: sans-serif;
+    }
+    .three-price {
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: darkblue;
+    }
+    .three-par {
+      text-align: center;
+      text-transform: capitalize;
+      margin-top: 1rem;
+      color: #f0eded;
+    }
+    .three-back-icons {
+      margin-top: 1rem;
+      @include flexi;
+      .three-d-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.4rem;
+        text-align: center;
+        & > * {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 10px;
+          transition: all 0.5s ease;
+          color: black;
+          &:hover {
+            &:hover {
+              background-color: #e9f5f5;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

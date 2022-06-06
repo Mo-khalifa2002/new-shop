@@ -1,0 +1,60 @@
+.mySwiper {
+  width: 100vw;
+  height: 100vh;
+  background: url("https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  .swiper-slide {
+    .product-right {
+      margin-bottom: 15rem;
+      background: black;
+      padding: 1rem;
+      border-radius: 1rem;
+      .product-desc {
+        max-width: 80%;
+      }
+      .product-name{
+        color: rgb(187, 255, 86);
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .mySwiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100vh;
+    img {
+      display: none;
+    }
+    .product-right {
+      max-width: 70vw;
+      display: inline-block;
+      margin-top: 20%;
+      .product-name {
+        color: yellow !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .product-right {
+    max-width: 70vw;
+    display: inline-block;
+    margin-top: 35%;
+  }
+}
+@media screen and (max-width: 670px) {
+  .product-right {
+    max-width: 70vw;
+    display: inline-block;
+    margin-top: 55%;
+  }
+}
