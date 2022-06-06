@@ -118,7 +118,7 @@ export const popularProducts = [
     id: 5,
     price: 399560,
     name: "black labtop",
-    img: "https://png.pngitem.com/pimgs/s/65-651818_computers-accessories-personal-computer-hd-png-download.png",
+    img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
   },
   {
     id: 5,
@@ -144,7 +144,6 @@ export const popularProducts = [
     name: "Red T-shirt",
     img: "https://png.pngitem.com/pimgs/s/479-4790601_mens-polo-shirt-t-shirt-png-transparent-png.png",
   },
-
 ];
 export const small = [
   {

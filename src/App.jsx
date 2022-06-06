@@ -7,6 +7,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Cart from "./components/footer/cart/Cart";
 import { useState } from "react";
+import Scroll from "./components/scrollToTop/Scroll";
 
 function App() {
   const { products } = data;
@@ -64,6 +65,7 @@ function App() {
             </h3>
           </div>
         </Link>
+        <Scroll />
         <Routes>
           <Route
             path="/"

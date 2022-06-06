@@ -1,13 +1,16 @@
 import React from "react";
 import "./hoverCard.scss";
+import { Slide, LightSpeed, Zoom, Flip, Fade } from "react-reveal";
+import Tada from "react-reveal/Tada";
 
 const HoverCard = ({ hovercard, onAdd }) => {
   return (
     <div className="hoverCard">
       {hovercard.map((hover) => (
         <div className="single-card .col-sm-12">
-       
-          <img src={hover.img} alt={hover.name} />
+          <Fade top cascade>
+            <img src={hover.img} alt={hover.name} />
+          </Fade>
           <div className="single-card-info">
             <h2 className="single-card-title">{hover.name}</h2>
             <p className="single-card-price">Price: {hover.price}</p>

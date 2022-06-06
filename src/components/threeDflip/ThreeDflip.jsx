@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { BsCart4 } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
+import { Slide, LightSpeed, Zoom, Flip, Fade } from "react-reveal";
+import Tada from "react-reveal/Tada";
+
 
 const ThreeDflip = ({ threedflip, onAdd }) => {
   const [isActive, setIsActive] = useState(false);
@@ -14,13 +17,16 @@ const ThreeDflip = ({ threedflip, onAdd }) => {
 
   return (
     <div className="three-d-flip">
-        
       {threedflip.map((hover) => (
         <div className="three-d-container">
-        
-          <div className="three-front">
-            <img src={hover.img} alt={hover.name} />
-          </div>
+          <Flip left cascade>
+              <Fade bottom cascade>
+
+            <div className="three-front">
+              <img src={hover.img} alt={hover.name} />
+            </div>
+              </Fade>
+          </Flip>
 
           {/* three-back */}
 

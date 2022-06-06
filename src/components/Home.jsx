@@ -22,8 +22,6 @@ import Fancy from "./fancySwiper/Fancy";
 import Neon from "./neo/Neon";
 import HoverCard from "./hoverCardAnimation/HoverCard";
 import ThreeDflip from "./threeDflip/ThreeDflip";
-import Glassmorphism from "./glassmorphism/Glassmorphism";
-import Glasses from "./glassmorphism/glasses";
 
 const Home = ({ products, cartItems, onAdd, onRemove }) => {
   return (
