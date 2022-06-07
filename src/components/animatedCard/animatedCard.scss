@@ -8,8 +8,8 @@ $trans: all 0.3s ease-in-out;
 .animted {
   background: $dark;
   height: 100vh;
-  .animated-name{
-      margin-bottom: -2rem;
+  .animated-name {
+    margin-bottom: -2rem;
   }
 }
 .animatedcard-body {
@@ -244,4 +244,17 @@ $trans: all 0.3s ease-in-out;
   transform: translateX(10px);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   z-index: -1;
+}
+
+@media screen and (max-width: 735px) {
+  .animated-name {
+    max-width: 75vw;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .animated-nam {
+    max-width: 90vw;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
